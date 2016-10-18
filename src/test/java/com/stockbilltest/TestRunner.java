@@ -6,6 +6,7 @@ import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
 
 /**
+ * Test Runner class
  * Created by hsenid on 10/18/16.
  */
 public class TestRunner {

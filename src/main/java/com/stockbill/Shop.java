@@ -5,6 +5,7 @@ import java.util.Iterator;
 import java.util.Scanner;
 
 /**
+ * Shop class with search item(), add item(), display item(), issue item(), check price() methods
  * Created by hsenid on 10/17/16.
  */
 public class Shop {
@@ -21,6 +22,10 @@ public class Shop {
         return ItemList.size();
     }
 
+
+    /**
+     *search item by code
+     */
     private Item search(long code) {
         Iterator<Item> itr = ItemList.iterator();
         Item item;
@@ -33,6 +38,10 @@ public class Shop {
         return null;
     }
 
+
+    /**
+     *search item by name
+     */
     public Item search(String name) {
         Iterator<Item> itr = ItemList.iterator();
         Item item;
@@ -45,6 +54,9 @@ public class Shop {
         return null;
     }
 
+    /**
+     * add item to array list
+     */
     public void addItem() {
 
         //String message="invoked addItem method";
@@ -80,6 +92,9 @@ public class Shop {
         //return message;
     }
 
+    /**
+     * update stock
+     */
     public void updateStock() {
         int choice, quantity;
         long code;
@@ -124,6 +139,9 @@ public class Shop {
 
     }
 
+    /**
+     * display items
+     */
     public void display() {
 
         String letter;
@@ -131,18 +149,6 @@ public class Shop {
         Item foundItem;
         String itemName;
 
-/*
-
-System.out.println("Enter Item code:");
-
-        System.out.println("Enter Item code:");
-        code = sc.nextLong();
-        foundItem = search(code);
-        if (foundItem == null) {
-            System.out.println("Item not found");
-            return;
-        }
-        */
 
         System.out.println("To Display selceted Items press S or To Display all Items press A");
         letter=sc.next();
@@ -173,6 +179,9 @@ System.out.println("Enter Item code:");
         }
     }
 
+    /**
+     * issue items method
+     */
     public void issueItem() {
         int numberOfItem;
         long code;
@@ -223,6 +232,9 @@ System.out.println("Enter Item code:");
 
     }
 
+    /**
+     *check price list method
+     */
     public double checkPrice(long code) {
         Item foundItem = search(code);
         if (foundItem == null) {

@@ -1,6 +1,7 @@
 package com.stockbill;
 
 /**
+ *Item class and Item Constructors
  * Created by hsenid on 10/17/16.
  */
 public class Item {
@@ -32,6 +33,9 @@ public class Item {
 
     }
 
+    /**
+     *toString() method
+     */
     @Override
     public String toString() {
         return "Item [name=" + name + ", rate=" + rate + ", code=" + code

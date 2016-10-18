@@ -3,6 +3,7 @@ package com.stockbill;
 import java.util.Scanner;
 
 /**
+ * class with main method
  * Created by hsenid on 10/17/16.
  */
 public class ItemDemo {
@@ -38,53 +39,55 @@ public class ItemDemo {
         } while (choiceVal != '6');
     }
 
+    /**
+     *switch statement
+     */
     public static void switchMethod(Shop aShop, char choiceVal) {
-
 
         switch (choiceVal) {
 
             case '1':
-                //message="invoked addItem method";
                 aShop.addItem();
-
                 break;
 
             case '2':
-                //message="invoked update stock method";
                 aShop.issueItem();
                 break;
 
             case '3':
-                //message="invoked issue item method";
                 aShop.updateStock();
                 break;
 
             case '4':
-                //message="invoked display method";
                 aShop.display();
                 break;
 
             case '5':
-                //message="invoked price of items method";
                 System.out.println("Price of the Item is:"
                         + aShop.checkPrice(inputCode()));
 
             case '6':
                 System.out.println("Thank you!\n");
                 break;
-            //return  message;
+
         }
-            //return message;
+
 
     }
 
+    /**
+     * method to invoke scanner
+     */
     public static  char scannerMethod(){
         Scanner sc = new Scanner(System.in);
         char choice = sc.nextLine().charAt(0);
         return choice;
-        //sc.close();
+
     }
 
+    /**
+     *method to return Item Code
+     */
     public static long inputCode() {
             Scanner sc = new Scanner(System.in);
             System.out.println("Enter Item code:");

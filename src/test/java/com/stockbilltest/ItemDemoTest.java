@@ -13,15 +13,20 @@ public class ItemDemoTest {
 
     Shop newShop = new Shop();
 
+    /**
+     * method to test CheckPrice() method
+     */
     @Test
     public void testCheckPrice() {
         Double realAns=newShop.checkPrice(0);
         Double expectedAns=0.0;
 
         assertEquals(realAns,expectedAns);
-
     }
 
+    /**
+     * method to test Search() method
+     */
     @Test
     public void testSearch() {
         Item itemReal=newShop.search("sugar");
